@@ -3,7 +3,7 @@
 Enhanced Flashcard App - Now with Images & Resizable Text!
 ==========================================================
 
-✨ NEW FEATURES:
+✨ NEW FEATURES::::
 - Image attachments on questions AND answers
 - Resizable text areas (drag the resize handle)
 - Dark/Light theme toggle
