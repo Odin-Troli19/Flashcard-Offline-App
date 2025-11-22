@@ -1804,3 +1804,65 @@ def main():
 
 if __name__ == "__main__":
     main()
+✨ PASTE IMAGES FROM CLIPBOARD (Ctrl+V)!
+
+FEATURES:
+✅ Paste screenshots directly with Ctrl+V
+✅ Image attachments on questions and answers
+✅ Resizable text input areas
+✅ Dark/Light theme toggle
+✅ Card tagging system
+✅ Search functionality
+✅ Study session history
+✅ Backup and restore
+
+How to paste images:
+1. Take a screenshot (Win+Shift+S or Snipping Tool)
+2. Click in a question or answer text box
+3. Press Ctrl+V
+4. The image is pasted and saved!
+
+Created with Python & Tkinter
+Powered by Pillow for image support
+
+All your original features are preserved!
+        """
+        
+        messagebox.showinfo("About", about_text)
+    
+    def run(self):
+        """Start the application."""
+        print("=" * 60)
+        print("Enhanced Flashcard App with Clipboard Paste")
+        print("=" * 60)
+        print(f"Data file: {self.DATA_FILE}")
+        print(f"Image directory: {self.IMAGE_DIR}")
+        
+        if not PIL_AVAILABLE:
+            print("\n⚠️  Image features disabled (Pillow not installed)")
+            print("   Install with: pip install Pillow")
+        else:
+            print("\n✓ Image support enabled")
+            print("  💡 Press Ctrl+V in text boxes to paste images!")
+        
+        deck_count = len(self.data["decks"])
+        total_cards = sum(len(d["cards"]) for d in self.data["decks"].values())
+        print(f"Loaded {deck_count} decks with {total_cards} cards\n")
+        
+        def on_closing():
+            if messagebox.askokcancel("Quit", "Do you want to quit?"):
+                self.save_data()
+                self.root.destroy()
+        
+        self.root.protocol("WM_DELETE_WINDOW", on_closing)
+        self.root.mainloop()
+
+
+def main():
+    """Main function."""
+    app = FlashcardApp()
+    app.run()
+
+
+if __name__ == "__main__":
+    main()
