@@ -1,0 +1,21 @@
+{
+  "decks": {
+    "DAT250": {
+      "cards": [],
+      "description": "",
+      "created": "2025-11-22T01:52:01.756593",
+      "last_studied": null,
+      "stats": {
+        "total_studies": 0,
+        "total_time": 0
+      }
+    }
+  },
+  "settings": {
+    "last_used_deck": null,
+    "theme": "light",
+    "study_mode": "sequential"
+  },
+  "tags": [],
+  "study_history": []
+}
